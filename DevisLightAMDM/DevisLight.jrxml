@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DevisLight" pageWidth="595" pageHeight="842" columnWidth="537" leftMargin="29" rightMargin="29" topMargin="29" bottomMargin="29" uuid="5bcddd9f-e6f5-4965-89e0-36d5959215ac">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DevisBeanCollection Adapter"/>
 	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="487"/>
 	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="503"/>
 	<property name="com.jaspersoft.studio.unit." value="cm"/>
@@ -145,7 +145,7 @@
 		<band height="81">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<image scaleImage="RetainShape" hAlign="Left">
-				<reportElement x="0" y="0" width="176" height="68" uuid="1d3b15e8-4eba-463b-a78c-be9fc6079e26">
+				<reportElement x="0" y="0" width="128" height="68" uuid="1d3b15e8-4eba-463b-a78c-be9fc6079e26">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="0"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -202,7 +202,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="651">
+		<band height="691">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<textField>
 				<reportElement mode="Opaque" x="260" y="-20" width="277" height="42" forecolor="#FFFFFF" backcolor="#A1C755" uuid="29336326-36f4-4d2b-b64e-3378e9831963"/>
@@ -212,7 +212,7 @@
 				<textFieldExpression><![CDATA["Formule "+$F{libelleFormule}+"\n"+$F{tarifAnnuel}+" € / an"]]></textFieldExpression>
 			</textField>
 			<frame>
-				<reportElement mode="Opaque" x="34" y="32" width="214" height="100" backcolor="#E4F1D5" uuid="0a029ccb-1079-43c1-97c5-7e15af150c2f">
+				<reportElement mode="Opaque" x="27" y="32" width="214" height="68" backcolor="#E4F1D5" uuid="0a029ccb-1079-43c1-97c5-7e15af150c2f">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
 					<property name="ShowOutOfBoundContent" value="false"/>
@@ -231,7 +231,7 @@
 					<text><![CDATA[VOTRE VEHICULE]]></text>
 				</staticText>
 				<textField>
-					<reportElement x="20" y="20" width="180" height="71" uuid="55d1ea66-ce39-4d1d-8709-0d0f07cc645e">
+					<reportElement x="20" y="20" width="180" height="48" uuid="55d1ea66-ce39-4d1d-8709-0d0f07cc645e">
 						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 						<property name="com.jaspersoft.layout.grid.y" value="1"/>
 						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -247,7 +247,7 @@
 				</textField>
 			</frame>
 			<frame>
-				<reportElement mode="Opaque" x="305" y="32" width="232" height="118" isRemoveLineWhenBlank="true" backcolor="#E4F1D5" uuid="8c828925-9a94-4862-b9c2-f8bb1c9f7ac7">
+				<reportElement mode="Opaque" x="305" y="32" width="232" height="147" isRemoveLineWhenBlank="true" backcolor="#E4F1D5" uuid="8c828925-9a94-4862-b9c2-f8bb1c9f7ac7">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="2"/>
@@ -279,7 +279,7 @@
 					<text><![CDATA[VOTRE EXPERIENCE]]></text>
 				</staticText>
 				<textField>
-					<reportElement x="25" y="20" width="196" height="90" uuid="f6a9eec8-db5d-4ee2-87d1-7a4e8a88e172">
+					<reportElement x="25" y="20" width="196" height="120" uuid="f6a9eec8-db5d-4ee2-87d1-7a4e8a88e172">
 						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 						<property name="com.jaspersoft.layout.grid.y" value="1"/>
 						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -298,7 +298,7 @@
 				</textField>
 			</frame>
 			<frame>
-				<reportElement style="BlocGarantie" positionType="Float" x="0" y="160" width="537" height="42" isRemoveLineWhenBlank="true" uuid="3d159c8c-597e-4949-aea2-ea29aa0463fa"/>
+				<reportElement style="BlocGarantie" positionType="Float" x="1" y="189" width="537" height="42" isRemoveLineWhenBlank="true" uuid="3d159c8c-597e-4949-aea2-ea29aa0463fa"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3FB413"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3FB413"/>
@@ -337,7 +337,7 @@
 							</datasetParameter>
 							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{garantiesIncluses})]]></dataSourceExpression>
 						</datasetRun>
-						<jr:listContents height="20" width="526">
+						<jr:listContents height="20" width="263">
 							<image>
 								<reportElement x="4" y="1" width="10" height="14" isRemoveLineWhenBlank="true" uuid="e9bea9c7-3d2e-452f-b071-5e2f132713fb">
 									<property name="com.jaspersoft.studio.unit.height" value="cm"/>
@@ -357,7 +357,7 @@
 				</componentElement>
 			</frame>
 			<frame>
-				<reportElement style="BlocGarantie" positionType="Float" x="0" y="210" width="537" height="41" isRemoveLineWhenBlank="true" uuid="5754c8c0-7ff1-401b-94db-7f814504b639"/>
+				<reportElement style="BlocGarantie" positionType="Float" x="1" y="239" width="537" height="41" isRemoveLineWhenBlank="true" uuid="5754c8c0-7ff1-401b-94db-7f814504b639"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3FB413"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3FB413"/>
@@ -388,14 +388,14 @@
 						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
 						<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
 					</reportElement>
-					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal">
 						<datasetRun subDataset="Garanties" uuid="af6c8921-78f9-4892-8836-def83150f473">
 							<datasetParameter name="ResourcesPath">
 								<datasetParameterExpression><![CDATA[$P{ResourcesPath}]]></datasetParameterExpression>
 							</datasetParameter>
 							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{garantiesOptionnellesSelectionnees})]]></dataSourceExpression>
 						</datasetRun>
-						<jr:listContents height="19" width="525">
+						<jr:listContents height="19" width="262">
 							<image>
 								<reportElement x="4" y="1" width="10" height="14" isRemoveLineWhenBlank="true" uuid="749fceeb-1514-4020-81be-b65552be4bc2">
 									<property name="com.jaspersoft.studio.unit.height" value="cm"/>
@@ -412,7 +412,7 @@
 				</componentElement>
 			</frame>
 			<staticText>
-				<reportElement style="TitreBloc" positionType="Float" x="0" y="260" width="537" height="20" isRemoveLineWhenBlank="true" uuid="6b78dd40-7090-493a-bc3e-008f9276dcd7">
+				<reportElement style="TitreBloc" positionType="Float" x="1" y="289" width="537" height="20" isRemoveLineWhenBlank="true" uuid="6b78dd40-7090-493a-bc3e-008f9276dcd7">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -425,11 +425,11 @@
 				<text><![CDATA[COMMENT SOUSCRIRE?]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="279" width="537" height="21" uuid="c95b0b8a-ca34-4fc2-8a34-8787deb59c46"/>
+				<reportElement positionType="Float" x="1" y="308" width="537" height="21" uuid="c95b0b8a-ca34-4fc2-8a34-8787deb59c46"/>
 				<text><![CDATA[Nos conseillers se tiennent à votre disposition pour finaliser votre souscription et répondre à toutes vos questions.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="300" width="537" height="20" isRemoveLineWhenBlank="true" forecolor="#052A40" uuid="54ed6cc9-f5dc-405d-b292-6ec3fe5f1866">
+				<reportElement positionType="Float" x="1" y="329" width="537" height="20" isRemoveLineWhenBlank="true" forecolor="#052A40" uuid="54ed6cc9-f5dc-405d-b292-6ec3fe5f1866">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -459,13 +459,13 @@
 				<textFieldExpression><![CDATA[$F{nom}+" "+$F{prenom}]]></textFieldExpression>
 			</textField>
 			<frame>
-				<reportElement positionType="Float" mode="Opaque" x="0" y="410" width="537" height="108" backcolor="#E8F7FE" uuid="3d21cb49-b354-4863-a940-414585389c9a">
+				<reportElement positionType="Float" mode="Opaque" x="1" y="419" width="537" height="108" backcolor="#EBF7FD" uuid="3d21cb49-b354-4863-a940-414585389c9a">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
 				</reportElement>
 				<frame>
 					<reportElement x="0" y="0" width="179" height="108" uuid="71b31666-ac4c-41d5-baa0-cc5e2a0263a8"/>
 					<image>
-						<reportElement x="67" y="10" width="50" height="50" uuid="3fc9871a-45de-42b2-8df1-b7cf11ffd01c"/>
+						<reportElement x="67" y="5" width="52" height="52" uuid="3fc9871a-45de-42b2-8df1-b7cf11ffd01c"/>
 						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-MULTI-CONTRAT.png"]]></imageExpression>
 					</image>
 					<staticText>
@@ -486,7 +486,7 @@
 				<frame>
 					<reportElement x="179" y="0" width="179" height="108" uuid="b820720a-0f47-4491-9a47-f8bd102c54cd"/>
 					<image>
-						<reportElement x="70" y="10" width="50" height="50" uuid="096218cf-dc9e-4b17-a7e4-88659bb8021e"/>
+						<reportElement x="70" y="5" width="52" height="52" uuid="096218cf-dc9e-4b17-a7e4-88659bb8021e"/>
 						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-CONDUITE-EXCLUSIF.png"]]></imageExpression>
 					</image>
 					<staticText>
@@ -507,7 +507,7 @@
 				<frame>
 					<reportElement x="358" y="0" width="179" height="108" uuid="782348d7-fd85-4d0f-b1b9-71b08c998c02"/>
 					<image>
-						<reportElement x="70" y="10" width="50" height="50" uuid="34f0bb1f-9cbf-4f23-a4c1-75c2bb8efbd5"/>
+						<reportElement x="70" y="5" width="52" height="52" uuid="34f0bb1f-9cbf-4f23-a4c1-75c2bb8efbd5"/>
 						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-PAYER-1FOIS.png"]]></imageExpression>
 					</image>
 					<staticText>
@@ -527,7 +527,7 @@
 				</frame>
 			</frame>
 			<textField>
-				<reportElement positionType="Float" x="0" y="518" width="537" height="62" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
+				<reportElement positionType="Float" x="1" y="527" width="537" height="62" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -542,7 +542,7 @@
 				<textFieldExpression><![CDATA["En souscrivant un contrat d'assurance chez nous, vous devenez, sauf si vous ne l'êtes déjà , sociétaire de la Mutuelle des Motards. Vous devez, à  ce titre, vous acquitter, une seule et unique fois, d'un droit d'adhésion de xx,xx € TTC.\nCe devis sur les prix et les garanties a été établi en fonction des informations que vous nous avez communiquées et ne constitue pas une proposition de tarif."]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="580" width="537" height="64" uuid="73d832b4-121c-4c4d-b9ab-5ff4a04d72c3"/>
+				<reportElement positionType="Float" x="1" y="589" width="537" height="64" forecolor="#6F6F6F" uuid="73d832b4-121c-4c4d-b9ab-5ff4a04d72c3"/>
 				<box>
 					<topPen lineWidth="1.0" lineColor="#3FB413"/>
 				</box>
@@ -552,12 +552,12 @@
 				<text><![CDATA[Les données personnelles vous concernant sont traitées dans le respect de la loi informatique et Libertés du 6 janvier 1978 modifiée. Elles sont nécessaires pour répondre à votre demande en ligne et sont destinées à l'Assurance Mutuelle des Motards. Vous disposez d'un droit d'accès, de rectification, d'opposition et d'effacement des données vous concernant. Ces droits peuvent être exercés en justifiant de votre identité auprès de Assurance Mutuelle des Motards, 270 impasse Adam Smith, CS10100, 34479 PEROLS cedex. Vous disposez du droit d'introduire une réclamation auprès de la CNIL. Si vous ne souhaitez pas faire l'objet de démarchage téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition sur le site www.bloctel.gouv.fr, toutefois en tant que sociétaire, nous sommes susceptibles de vous adresser de tels appels.]]></text>
 			</staticText>
 			<image hAlign="Center" vAlign="Middle" hyperlinkType="Reference">
-				<reportElement positionType="Float" x="208" y="321" width="130" height="47" uuid="6a9b3505-2853-40c6-ab16-40818570e377"/>
+				<reportElement positionType="Float" x="213" y="349" width="125" height="39" uuid="6a9b3505-2853-40c6-ab16-40818570e377"/>
 				<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-ETRE_RAPPELE.png"]]></imageExpression>
 				<hyperlinkReferenceExpression><![CDATA["http://services.freecallback.fr/card.php?cid=435877430"]]></hyperlinkReferenceExpression>
 			</image>
 			<staticText>
-				<reportElement positionType="Float" x="124" y="375" width="122" height="20" isRemoveLineWhenBlank="true" forecolor="#052A40" uuid="e619cb9c-6d8b-4c57-8013-c899174e3f60">
+				<reportElement positionType="Float" x="157" y="390" width="122" height="20" isRemoveLineWhenBlank="true" forecolor="#052A40" uuid="e619cb9c-6d8b-4c57-8013-c899174e3f60">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -571,18 +571,18 @@
 				</textElement>
 				<text><![CDATA[OU APPELEZ LE]]></text>
 			</staticText>
-			<image>
-				<reportElement positionType="Float" x="246" y="370" width="212" height="30" uuid="369af139-1826-4272-9d4f-367059e9ae7d"/>
+			<image vAlign="Middle">
+				<reportElement positionType="Float" x="282" y="390" width="112" height="20" uuid="369af139-1826-4272-9d4f-367059e9ae7d"/>
 				<imageExpression><![CDATA[$P{ResourcesPath}+"TEL-PROSPECT.jpg"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="0" y="32" width="50" height="50" uuid="ffd4edd7-c8c9-4681-9f7c-0924e03a0c67">
+				<reportElement x="1" y="32" width="40" height="40" uuid="ffd4edd7-c8c9-4681-9f7c-0924e03a0c67">
 					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
 				</reportElement>
 				<imageExpression><![CDATA["resources/PICTO-MOTO-FACE.png"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="280" y="32" width="50" height="50" uuid="0b1e7efc-285e-464e-9887-8d4d227387b5"/>
+				<reportElement x="280" y="32" width="40" height="40" uuid="0b1e7efc-285e-464e-9887-8d4d227387b5"/>
 				<imageExpression><![CDATA["resources/PICTO-CONDUCTEUR-FACE.png"]]></imageExpression>
 			</image>
 		</band>
