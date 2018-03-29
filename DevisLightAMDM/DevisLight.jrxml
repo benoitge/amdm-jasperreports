@@ -236,11 +236,11 @@
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA["<style isBold=\"true\">MOTO</style>\n"+
-"Le conducteur a "+($F{nbAnneesAssuranceMoto}==1?"1 an":"") + ($F{nbAnneesAssuranceMoto}==0?"0 année":"") + ($F{nbAnneesAssuranceMoto}>1?$F{nbAnneesAssuranceMoto}+ " années":"") +" d'assurance moto  et "+ ($F{crmMoto}<1?"un bonus":"") +($F{crmMoto}>1?"un malus":"") + ($F{crmMoto}==1?"ni bonus ni malus":"")+($F{crmMoto}!=1?" de "+new DecimalFormat("#0.00").format($F{crmMoto}):"")+($F{crmMoto}>1.5?" ou plus.":"")+"\n"+"Le conducteur déclare "+ ($F{nbAccidentsRespMoto}==0?" ne pas avoir eu d'accidents responsables": "") + ($F{nbAccidentsRespMoto}==1?" avoir eu un accident responsable":"") + ($F{nbAccidentsRespMoto}==2?" avoir eu deux accidents responsables":"") + ($F{nbAccidentsRespMoto}>2?" avoir eu plus de deux accidents responsables":"") + " au cours des 24 derniers mois" +"\n"+
+"Le conducteur a "+($F{nbAnneesAssuranceMoto}==1?"1 an":"") + ($F{nbAnneesAssuranceMoto}==0?"0 année":"") + ($F{nbAnneesAssuranceMoto}>1?$F{nbAnneesAssuranceMoto}+ " années":"") +" d'assurance moto et "+ ($F{crmMoto}<1?"un bonus":"") +($F{crmMoto}>1?"un malus":"") + ($F{crmMoto}==1?"ni bonus ni malus":"")+($F{crmMoto}!=1?" de "+new DecimalFormat("#0.00").format($F{crmMoto}):"")+($F{crmMoto}>1.5?" ou plus.":"")+"\n"+"Le conducteur déclare "+ ($F{nbAccidentsRespMoto}==0?"ne pas avoir eu d'accidents responsables": "") + ($F{nbAccidentsRespMoto}==1?"avoir eu un accident responsable":"") + ($F{nbAccidentsRespMoto}==2?"avoir eu deux accidents responsables":"") + ($F{nbAccidentsRespMoto}>2?"avoir eu plus de deux accidents responsables":"") + " au cours des 24 derniers mois" +"\n"+
 
 ($F{nbAnneesAssuranceAuto}!=null?(
 "\n<style isBold=\"true\">AUTO</style>\n"+
-"Le conducteur a "+($F{nbAnneesAssuranceAuto}==1?"1 an":"") + ($F{nbAnneesAssuranceAuto}==0?"0 année":"") + ($F{nbAnneesAssuranceAuto}>1?$F{nbAnneesAssuranceAuto}+ " années":"")+" d'assurance auto et "+($F{crmAuto}<1?"un bonus":"") +($F{crmAuto}>1?"un malus":"")+($F{crmAuto}==1?"ni bonus ni malus":"")+($F{crmAuto}!=1?" de "+new DecimalFormat("#0.00").format($F{crmAuto}):"")+($F{crmAuto}>1.5?" ou plus.":"")+"\n"+"Le conducteur déclare "+ ($F{nbAccidentsRespAuto}==0?" ne pas avoir eu d'accidents responsables": "") + ($F{nbAccidentsRespAuto}==1?" avoir eu un accident responsable":"") + ($F{nbAccidentsRespAuto}==2?" avoir eu deux accidents responsables":"") + ($F{nbAccidentsRespAuto}>2?" avoir eu plus de deux accidents responsables":"") + " au cours des 24 derniers mois" +"\n"):"")]]></textFieldExpression>
+"Le conducteur a "+($F{nbAnneesAssuranceAuto}==1?"1 an":"") + ($F{nbAnneesAssuranceAuto}==0?"0 année":"") + ($F{nbAnneesAssuranceAuto}>1?$F{nbAnneesAssuranceAuto}+ " années":"")+" d'assurance auto et "+($F{crmAuto}<1?"un bonus":"") +($F{crmAuto}>1?"un malus":"")+($F{crmAuto}==1?"ni bonus ni malus":"")+($F{crmAuto}!=1?" de "+new DecimalFormat("#0.00").format($F{crmAuto}):"")+($F{crmAuto}>1.5?" ou plus.":"")+"\n"+"Le conducteur déclare "+ ($F{nbAccidentsRespAuto}==0?"ne pas avoir eu d'accidents responsables": "") + ($F{nbAccidentsRespAuto}==1?"avoir eu un accident responsable":"") + ($F{nbAccidentsRespAuto}==2?"avoir eu deux accidents responsables":"") + ($F{nbAccidentsRespAuto}>2?"avoir eu plus de deux accidents responsables":"") + " au cours des 24 derniers mois" +"\n"):"")]]></textFieldExpression>
 				</textField>
 			</frame>
 			<frame>
@@ -362,7 +362,7 @@
 				</componentElement>
 				<staticText>
 					<reportElement positionType="Float" x="12" y="21" width="525" height="19" isRemoveLineWhenBlank="true" uuid="2e1ce808-7471-4e27-8217-00a94af8f3b1">
-						<printWhenExpression><![CDATA[$F{garantiesOptionnellesSelectionnees}==null]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{garantiesOptionnellesSelectionnees}.size()==0]]></printWhenExpression>
 					</reportElement>
 					<textElement verticalAlignment="Middle"/>
 					<text><![CDATA[Vous n'avez pas choisi de garanties optionnelles]]></text>
@@ -570,7 +570,7 @@
 				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
 					<font size="10"/>
 				</textElement>
-				<textFieldExpression><![CDATA["DEVIS" + ($F{reference}!="null/null"?" - N° "+"<b>"+$F{reference}+"</b>":"")]]></textFieldExpression>
+				<textFieldExpression><![CDATA["PROPOSITION" + ($F{reference}!="null/null"?" - N° "+"<b>"+$F{reference}+"</b>":"")]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="320" y="33" width="215" height="14" uuid="545967f5-ab5d-4ead-b5e4-f9b141ca1157">
