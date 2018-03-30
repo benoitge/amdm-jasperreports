@@ -364,8 +364,10 @@
 					<reportElement positionType="Float" x="12" y="21" width="525" height="19" isRemoveLineWhenBlank="true" uuid="2e1ce808-7471-4e27-8217-00a94af8f3b1">
 						<printWhenExpression><![CDATA[$F{garantiesOptionnellesSelectionnees}.size()==0]]></printWhenExpression>
 					</reportElement>
-					<textElement verticalAlignment="Middle"/>
-					<text><![CDATA[Vous n'avez pas choisi de garanties optionnelles]]></text>
+					<textElement verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Vous n'avez pas choisi de garantie optionnelle]]></text>
 				</staticText>
 			</frame>
 			<staticText>
