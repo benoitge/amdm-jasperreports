@@ -145,8 +145,11 @@
 	<field name="garantiesComplementaires" class="java.util.Collection">
 		<fieldDescription><![CDATA[garantiesComplementaires]]></fieldDescription>
 	</field>
+	<field name="version" class="java.lang.Integer">
+		<fieldDescription><![CDATA[version]]></fieldDescription>
+	</field>
 	<detail>
-		<band height="640">
+		<band height="484">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<textField>
 				<reportElement mode="Opaque" x="260" y="57" width="277" height="42" forecolor="#FFFFFF" backcolor="#A1C755" uuid="29336326-36f4-4d2b-b64e-3378e9831963"/>
@@ -420,76 +423,8 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nom}.toUpperCase()+" "+$F{prenom}.toUpperCase()]]></textFieldExpression>
 			</textField>
-			<frame>
-				<reportElement positionType="Float" mode="Opaque" x="-1" y="427" width="537" height="76" backcolor="#EBF7FD" uuid="3d21cb49-b354-4863-a940-414585389c9a">
-					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
-				</reportElement>
-				<frame>
-					<reportElement x="0" y="0" width="179" height="76" uuid="71b31666-ac4c-41d5-baa0-cc5e2a0263a8"/>
-					<image>
-						<reportElement x="66" y="5" width="45" height="45" uuid="3fc9871a-45de-42b2-8df1-b7cf11ffd01c"/>
-						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-MULTI-CONTRAT.png"]]></imageExpression>
-					</image>
-					<staticText>
-						<reportElement x="6" y="52" width="166" height="12" uuid="883165ce-7e75-4456-8b59-eb4694f04d07"/>
-						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="true"/>
-						</textElement>
-						<text><![CDATA[JUSQU'A 20% DE REDUCTION !]]></text>
-					</staticText>
-					<staticText>
-						<reportElement x="6" y="64" width="166" height="12" uuid="48a52203-1d2a-4d9b-afc1-16f22c73c416"/>
-						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="false"/>
-						</textElement>
-						<text><![CDATA[En assurant plusieurs véhicules]]></text>
-					</staticText>
-				</frame>
-				<frame>
-					<reportElement x="179" y="0" width="179" height="76" uuid="b820720a-0f47-4491-9a47-f8bd102c54cd"/>
-					<image>
-						<reportElement x="68" y="5" width="45" height="45" uuid="096218cf-dc9e-4b17-a7e4-88659bb8021e"/>
-						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-CONDUITE-EXCLUSIF.png"]]></imageExpression>
-					</image>
-					<staticText>
-						<reportElement x="5" y="52" width="168" height="12" uuid="03390361-d092-4924-867e-821941a7992d"/>
-						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="true"/>
-						</textElement>
-						<text><![CDATA[BENEFICIEZ D'UNE REMISE !]]></text>
-					</staticText>
-					<staticText>
-						<reportElement x="5" y="64" width="168" height="12" uuid="f198e1a7-8c77-4492-a4c3-aa0c44c18829"/>
-						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="false"/>
-						</textElement>
-						<text><![CDATA[Avec la conduite exclusive]]></text>
-					</staticText>
-				</frame>
-				<frame>
-					<reportElement x="358" y="0" width="179" height="76" uuid="782348d7-fd85-4d0f-b1b9-71b08c998c02"/>
-					<image>
-						<reportElement x="70" y="5" width="45" height="45" uuid="34f0bb1f-9cbf-4f23-a4c1-75c2bb8efbd5"/>
-						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-PAYER-1FOIS.png"]]></imageExpression>
-					</image>
-					<staticText>
-						<reportElement x="6" y="52" width="168" height="12" uuid="390a28e6-1727-4142-841d-cd99f86f4103"/>
-						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="true"/>
-						</textElement>
-						<text><![CDATA[PAYEZ MOINS CHER !]]></text>
-					</staticText>
-					<staticText>
-						<reportElement x="6" y="64" width="168" height="12" uuid="8cd28784-f3ab-4a8a-b193-22b9744ec936"/>
-						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="false"/>
-						</textElement>
-						<text><![CDATA[En réglant votre côtisation en 1 fois]]></text>
-					</staticText>
-				</frame>
-			</frame>
 			<textField>
-				<reportElement positionType="Float" x="-1" y="505" width="537" height="44" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
+				<reportElement positionType="Float" x="-1" y="440" width="537" height="44" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -562,7 +497,7 @@
 				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
 					<font size="10"/>
 				</textElement>
-				<textFieldExpression><![CDATA["DEVIS" + ($F{reference}!="null/null"?" - N° "+"<b>"+$F{reference}+"</b>":"")]]></textFieldExpression>
+				<textFieldExpression><![CDATA["DEVIS - N° "+"<b>"+$F{reference} + "-" + $F{version} + "</b>"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="320" y="33" width="215" height="14" uuid="545967f5-ab5d-4ead-b5e4-f9b141ca1157">
@@ -595,18 +530,18 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="49">
+		<band height="129">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<printWhenExpression><![CDATA[$V{PAGE_COUNT}==1]]></printWhenExpression>
 			<staticText>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="39" width="537" height="10" uuid="37a5841a-d364-4e3c-9804-46f35de8e594"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="119" width="537" height="10" uuid="37a5841a-d364-4e3c-9804-46f35de8e594"/>
 				<textElement textAlignment="Right">
 					<font size="7"/>
 				</textElement>
 				<text><![CDATA[MUT024-SOUPARTS-V01-2018-03-15]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="537" height="39" forecolor="#6F6F6F" uuid="73d832b4-121c-4c4d-b9ab-5ff4a04d72c3"/>
+				<reportElement positionType="FixRelativeToBottom" x="-1" y="80" width="537" height="39" forecolor="#6F6F6F" uuid="73d832b4-121c-4c4d-b9ab-5ff4a04d72c3"/>
 				<box>
 					<topPen lineWidth="1.0" lineColor="#3FB413"/>
 				</box>
@@ -615,6 +550,74 @@
 				</textElement>
 				<text><![CDATA[Les données personnelles vous concernant sont traitées dans le respect de la loi Informatique et Libertés du 6 janvier 1978 modifiée. Elles sont nécessaires pour répondre à votre demande en ligne et sont destinées à l'Assurance Mutuelle des Motards. Vous disposez d'un droit d'accès, de rectification, d'opposition et d'effacement des données vous concernant. Ces droits peuvent être exercés en justifiant de votre identité auprès de Assurance Mutuelle des Motards, 270 impasse Adam Smith, CS10100, 34479 PEROLS cedex. Vous disposez du droit d'introduire une réclamation auprès de la CNIL. Si vous ne souhaitez pas faire l'objet de démarchage téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition sur le site www.bloctel.gouv.fr. Toutefois en tant que sociétaire, nous sommes susceptibles de vous adresser de tels appels.]]></text>
 			</staticText>
+			<frame>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="0" width="537" height="76" backcolor="#EBF7FD" uuid="3d21cb49-b354-4863-a940-414585389c9a">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+				</reportElement>
+				<frame>
+					<reportElement x="0" y="0" width="179" height="76" uuid="71b31666-ac4c-41d5-baa0-cc5e2a0263a8"/>
+					<image>
+						<reportElement x="66" y="5" width="45" height="45" uuid="3fc9871a-45de-42b2-8df1-b7cf11ffd01c"/>
+						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-MULTI-CONTRAT.png"]]></imageExpression>
+					</image>
+					<staticText>
+						<reportElement x="6" y="52" width="166" height="12" uuid="883165ce-7e75-4456-8b59-eb4694f04d07"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[JUSQU'A 20% DE REDUCTION !]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="6" y="64" width="166" height="12" uuid="48a52203-1d2a-4d9b-afc1-16f22c73c416"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8" isBold="false"/>
+						</textElement>
+						<text><![CDATA[En assurant plusieurs véhicules]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="179" y="0" width="179" height="76" uuid="b820720a-0f47-4491-9a47-f8bd102c54cd"/>
+					<image>
+						<reportElement x="68" y="5" width="45" height="45" uuid="096218cf-dc9e-4b17-a7e4-88659bb8021e"/>
+						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-CONDUITE-EXCLUSIF.png"]]></imageExpression>
+					</image>
+					<staticText>
+						<reportElement x="5" y="52" width="168" height="12" uuid="03390361-d092-4924-867e-821941a7992d"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[BENEFICIEZ D'UNE REMISE !]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="5" y="64" width="168" height="12" uuid="f198e1a7-8c77-4492-a4c3-aa0c44c18829"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8" isBold="false"/>
+						</textElement>
+						<text><![CDATA[Avec la conduite exclusive]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="358" y="0" width="179" height="76" uuid="782348d7-fd85-4d0f-b1b9-71b08c998c02"/>
+					<image>
+						<reportElement x="70" y="5" width="45" height="45" uuid="34f0bb1f-9cbf-4f23-a4c1-75c2bb8efbd5"/>
+						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-PAYER-1FOIS.png"]]></imageExpression>
+					</image>
+					<staticText>
+						<reportElement x="6" y="52" width="168" height="12" uuid="390a28e6-1727-4142-841d-cd99f86f4103"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[PAYEZ MOINS CHER !]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="6" y="64" width="168" height="12" uuid="8cd28784-f3ab-4a8a-b193-22b9744ec936"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8" isBold="false"/>
+						</textElement>
+						<text><![CDATA[En réglant votre côtisation en 1 fois]]></text>
+					</staticText>
+				</frame>
+			</frame>
 		</band>
 	</pageFooter>
 </jasperReport>
