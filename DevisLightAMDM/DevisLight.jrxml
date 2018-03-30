@@ -487,7 +487,7 @@
 				</frame>
 			</frame>
 			<textField>
-				<reportElement positionType="Float" x="-1" y="505" width="537" height="40" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
+				<reportElement positionType="Float" x="-1" y="505" width="537" height="44" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -501,16 +501,6 @@
 				</textElement>
 				<textFieldExpression><![CDATA["En souscrivant un contrat d'assurance chez nous, vous devenez, sauf si vous ne l'êtes déjà, sociétaire de la Mutuelle des Motards. Vous devez, à  ce titre, vous acquitter, une seule et unique fois, d'un droit d'adhésion de "+$P{DroitAdhesion}+" € TTC (tarif en France métropolitaine).\nCe devis sur les prix et les garanties a été établi en fonction des informations que vous nous avez communiquées et ne constitue pas une proposition de tarif."]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="545" width="537" height="39" forecolor="#6F6F6F" uuid="73d832b4-121c-4c4d-b9ab-5ff4a04d72c3"/>
-				<box>
-					<topPen lineWidth="1.0" lineColor="#3FB413"/>
-				</box>
-				<textElement>
-					<font size="6"/>
-				</textElement>
-				<text><![CDATA[Les données personnelles vous concernant sont traitées dans le respect de la loi Informatique et Libertés du 6 janvier 1978 modifiée. Elles sont nécessaires pour répondre à votre demande en ligne et sont destinées à l'Assurance Mutuelle des Motards. Vous disposez d'un droit d'accès, de rectification, d'opposition et d'effacement des données vous concernant. Ces droits peuvent être exercés en justifiant de votre identité auprès de Assurance Mutuelle des Motards, 270 impasse Adam Smith, CS10100, 34479 PEROLS cedex. Vous disposez du droit d'introduire une réclamation auprès de la CNIL. Si vous ne souhaitez pas faire l'objet de démarchage téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition sur le site www.bloctel.gouv.fr. Toutefois en tant que sociétaire, nous sommes susceptibles de vous adresser de tels appels.]]></text>
-			</staticText>
 			<image hAlign="Center" vAlign="Middle" hyperlinkType="Reference">
 				<reportElement positionType="Float" x="212" y="367" width="125" height="39" uuid="6a9b3505-2853-40c6-ab16-40818570e377"/>
 				<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-ETRE_RAPPELE.png"]]></imageExpression>
@@ -532,7 +522,7 @@
 				<text><![CDATA[OU APPELEZ LE]]></text>
 			</staticText>
 			<image vAlign="Middle">
-				<reportElement positionType="Float" x="281" y="408" width="112" height="20" uuid="369af139-1826-4272-9d4f-367059e9ae7d"/>
+				<reportElement positionType="Float" x="281" y="406" width="119" height="22" uuid="369af139-1826-4272-9d4f-367059e9ae7d"/>
 				<imageExpression><![CDATA[$P{ResourcesPath}+"TEL-PROSPECT.jpg"]]></imageExpression>
 			</image>
 			<image>
@@ -570,7 +560,7 @@
 				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
 					<font size="10"/>
 				</textElement>
-				<textFieldExpression><![CDATA["PROPOSITION" + ($F{reference}!="null/null"?" - N° "+"<b>"+$F{reference}+"</b>":"")]]></textFieldExpression>
+				<textFieldExpression><![CDATA["DEVIS" + ($F{reference}!="null/null"?" - N° "+"<b>"+$F{reference}+"</b>":"")]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="320" y="33" width="215" height="14" uuid="545967f5-ab5d-4ead-b5e4-f9b141ca1157">
@@ -603,15 +593,25 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="10">
-			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+		<band height="49">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<printWhenExpression><![CDATA[$V{PAGE_COUNT}==1]]></printWhenExpression>
 			<staticText>
-				<reportElement x="0" y="0" width="537" height="10" uuid="37a5841a-d364-4e3c-9804-46f35de8e594"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="39" width="537" height="10" uuid="37a5841a-d364-4e3c-9804-46f35de8e594"/>
 				<textElement textAlignment="Right">
 					<font size="7"/>
 				</textElement>
 				<text><![CDATA[MUT024-SOUPARTS-V01-2018-03-15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="537" height="39" forecolor="#6F6F6F" uuid="73d832b4-121c-4c4d-b9ab-5ff4a04d72c3"/>
+				<box>
+					<topPen lineWidth="1.0" lineColor="#3FB413"/>
+				</box>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Les données personnelles vous concernant sont traitées dans le respect de la loi Informatique et Libertés du 6 janvier 1978 modifiée. Elles sont nécessaires pour répondre à votre demande en ligne et sont destinées à l'Assurance Mutuelle des Motards. Vous disposez d'un droit d'accès, de rectification, d'opposition et d'effacement des données vous concernant. Ces droits peuvent être exercés en justifiant de votre identité auprès de Assurance Mutuelle des Motards, 270 impasse Adam Smith, CS10100, 34479 PEROLS cedex. Vous disposez du droit d'introduire une réclamation auprès de la CNIL. Si vous ne souhaitez pas faire l'objet de démarchage téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition sur le site www.bloctel.gouv.fr. Toutefois en tant que sociétaire, nous sommes susceptibles de vous adresser de tels appels.]]></text>
 			</staticText>
 		</band>
 	</pageFooter>
