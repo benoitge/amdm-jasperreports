@@ -14,8 +14,7 @@
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
 	<property name="net.sf.jasperreports.export.character.encoding" value="Cp1252"/>
-	<style name="TitreBloc" forecolor="#004773" scaleImage="FillFrame" fontSize="12" isBold="true"/>
-	<style name="BlocEnTete"/>
+	<style name="TitreBloc" forecolor="#004773" scaleImage="FillFrame" fontName="HelveticaNeue LT 97 BlackCn" fontSize="12" isBold="false"/>
 	<style name="BlocGarantie">
 		<box>
 			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#A1C755"/>
@@ -154,7 +153,7 @@
 			<textField>
 				<reportElement mode="Opaque" x="260" y="57" width="277" height="42" forecolor="#FFFFFF" backcolor="#A1C755" uuid="29336326-36f4-4d2b-b64e-3378e9831963"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="16" isBold="true"/>
+					<font fontName="HelveticaNeue LT 97 BlackCn" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Formule "+$F{libelleFormule}+"\n"+new DecimalFormat("#0").format($F{tarifAnnuel})+" € / an"]]></textFieldExpression>
 			</textField>
@@ -165,7 +164,7 @@
 					<property name="ShowOutOfBoundContent" value="false"/>
 				</reportElement>
 				<staticText>
-					<reportElement style="TitreBloc" mode="Transparent" x="20" y="0" width="180" height="20" uuid="bcaf3550-9fc3-429b-ba35-489fbf2d96d4">
+					<reportElement style="TitreBloc" x="20" y="0" width="180" height="20" uuid="bcaf3550-9fc3-429b-ba35-489fbf2d96d4">
 						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
 						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -188,7 +187,7 @@
 						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
 					</reportElement>
 					<textElement textAlignment="Left" verticalAlignment="Top">
-						<font size="8"/>
+						<font fontName="HelveticaNeue LT 57 Cn" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{marque}+" "+$F{modele}+" "+("0".equals($F{cylindree})?"":$F{cylindree}) + "\n"+"Date de 1ère immatriculation : "+new java.text.SimpleDateFormat("MM/yyyy").format($F{dateMEC}) +"\n"+"Lieu de garage : "+$F{cpLieuGarage}+" "+$F{villeLieuGarage}+"\n"+"Usage du véhicule : "+$F{usageVehicule}]]></textFieldExpression>
 				</textField>
@@ -236,7 +235,7 @@
 						<property name="com.jaspersoft.layout.grid.weight.fixed" value="true"/>
 					</reportElement>
 					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
-						<font size="8"/>
+						<font fontName="HelveticaNeue LT 57 Cn" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA["<style isBold=\"true\">MOTO</style>\n"+
 "Le conducteur a "+($F{nbAnneesAssuranceMoto}==1?"1 an":"") + ($F{nbAnneesAssuranceMoto}==0?"0 année":"") + ($F{nbAnneesAssuranceMoto}>1?$F{nbAnneesAssuranceMoto}+ " années":"") +" d'assurance moto et "+ ($F{crmMoto}<1?"un bonus":"") +($F{crmMoto}>1?"un malus":"") + ($F{crmMoto}==1?"ni bonus ni malus":"")+($F{crmMoto}!=1?" de "+new DecimalFormat("#0.00").format($F{crmMoto}):"")+($F{crmMoto}>1.5?" ou plus.":"")+"\n"+"Le conducteur déclare "+ ($F{nbAccidentsRespMoto}==0?"ne pas avoir eu d'accidents responsables": "") + ($F{nbAccidentsRespMoto}==1?"avoir eu un accident responsable":"") + ($F{nbAccidentsRespMoto}==2?"avoir eu deux accidents responsables":"") + ($F{nbAccidentsRespMoto}>2?"avoir eu plus de deux accidents responsables":"") + " au cours des 24 derniers mois" +"\n"+
@@ -299,7 +298,7 @@
 									<printWhenExpression><![CDATA[$F{title}!=null && !("".equals($F{title}))]]></printWhenExpression>
 								</reportElement>
 								<textElement verticalAlignment="Top" markup="styled">
-									<font size="9"/>
+									<font fontName="HelveticaNeue LT 57 Cn" size="10"/>
 								</textElement>
 								<textFieldExpression><![CDATA["<style isBold=\"true\" forecolor=\"black\">" + $F{title} + "</style> " + "<style forecolor=\"grey\">" +$F{description}+"</style>"]]></textFieldExpression>
 							</textField>
@@ -356,7 +355,7 @@
 							<textField isStretchWithOverflow="true">
 								<reportElement x="20" y="0" width="504" height="15" isRemoveLineWhenBlank="true" uuid="871406e8-596c-48c2-b985-13ea4eb855d9"/>
 								<textElement verticalAlignment="Top" markup="styled">
-									<font size="9"/>
+									<font fontName="HelveticaNeue LT 57 Cn" size="10"/>
 								</textElement>
 								<textFieldExpression><![CDATA["<b>"+$F{title}+" : </b>"+$F{description}]]></textFieldExpression>
 							</textField>
@@ -368,7 +367,7 @@
 						<printWhenExpression><![CDATA[$F{garantiesOptionnellesSelectionnees}.size()==0]]></printWhenExpression>
 					</reportElement>
 					<textElement verticalAlignment="Middle">
-						<font size="9"/>
+						<font fontName="HelveticaNeue LT 57 Cn" size="10"/>
 					</textElement>
 					<text><![CDATA[Vous n'avez pas choisi de garantie optionnelle]]></text>
 				</staticText>
@@ -389,7 +388,7 @@
 			<staticText>
 				<reportElement positionType="Float" x="1" y="332" width="537" height="15" uuid="c95b0b8a-ca34-4fc2-8a34-8787deb59c46"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="HelveticaNeue LT 57 Cn" size="10"/>
 				</textElement>
 				<text><![CDATA[Nos conseillers se tiennent à votre disposition pour finaliser votre souscription et répondre à toutes vos questions.]]></text>
 			</staticText>
@@ -404,7 +403,7 @@
 					<property name="com.jaspersoft.layout.grid.weight.fixed" value="true"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font fontName="HelveticaNeue LT 77 BoldCn" size="12"/>
 				</textElement>
 				<text><![CDATA[GAGNEZ DU TEMPS, PRENEZ CONTACT AVEC NOUS :]]></text>
 			</staticText>
@@ -419,12 +418,12 @@
 					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="HelveticaNeue LT 57 Cn" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nom}.toUpperCase()+" "+$F{prenom}.toUpperCase()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement positionType="Float" x="-1" y="440" width="537" height="44" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
+				<reportElement positionType="Float" x="-1" y="428" width="537" height="52" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -434,7 +433,7 @@
 					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font size="8"/>
+					<font fontName="HelveticaNeue LT 57 Cn" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA["En souscrivant un contrat d'assurance chez nous, vous devenez, sauf si vous ne l'êtes déjà, sociétaire de la Mutuelle des Motards. Vous devez, à  ce titre, vous acquitter, une seule et unique fois, d'un droit d'adhésion de "+$P{DroitAdhesion}+" € TTC (tarif en France métropolitaine).\nCe devis sur les prix et les garanties a été établi en fonction des informations que vous nous avez communiquées et ne constitue pas une proposition de tarif."]]></textFieldExpression>
 			</textField>
@@ -454,7 +453,7 @@
 					<property name="com.jaspersoft.layout.grid.weight.fixed" value="true"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font fontName="HelveticaNeue LT 77 BoldCn" size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[OU APPELEZ LE]]></text>
 			</staticText>
@@ -485,7 +484,7 @@
 				<imageExpression><![CDATA[$P{ResourcesPath}+"LOGO-ENTETE-ADRESSE-MENTION-PROSPECT.jpg"]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="320" y="10" width="215" height="14" uuid="211c85cb-6a49-419a-94f9-fcb371856e31">
+				<reportElement x="321" y="8" width="215" height="23" uuid="211c85cb-6a49-419a-94f9-fcb371856e31">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -495,7 +494,7 @@
 					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
-					<font size="10"/>
+					<font fontName="HelveticaNeue LT 67 MdCn" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["DEVIS - N° "+"<b>"+$F{reference} + "-" + $F{version} + "</b>"]]></textFieldExpression>
 			</textField>
@@ -516,7 +515,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="10"/>
+					<font fontName="HelveticaNeue LT 67 MdCn" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Fait le "+new java.text.SimpleDateFormat("dd/MM/yyyy").format($F{dateDevis})]]></textFieldExpression>
 			</textField>
@@ -530,23 +529,23 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="129">
+		<band height="140">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<printWhenExpression><![CDATA[$V{PAGE_COUNT}==1]]></printWhenExpression>
 			<staticText>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="119" width="537" height="10" uuid="37a5841a-d364-4e3c-9804-46f35de8e594"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="131" width="537" height="9" uuid="37a5841a-d364-4e3c-9804-46f35de8e594"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="HelveticaNeue LT 47 LtCn" size="7"/>
 				</textElement>
 				<text><![CDATA[MUT024-SOUPARTS-V01-2018-03-15]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="FixRelativeToBottom" x="-1" y="80" width="537" height="39" forecolor="#6F6F6F" uuid="73d832b4-121c-4c4d-b9ab-5ff4a04d72c3"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="81" width="537" height="50" forecolor="#6F6F6F" uuid="73d832b4-121c-4c4d-b9ab-5ff4a04d72c3"/>
 				<box>
 					<topPen lineWidth="1.0" lineColor="#3FB413"/>
 				</box>
 				<textElement>
-					<font size="6"/>
+					<font fontName="HelveticaNeue LT 47 LtCn" size="8"/>
 				</textElement>
 				<text><![CDATA[Les données personnelles vous concernant sont traitées dans le respect de la loi Informatique et Libertés du 6 janvier 1978 modifiée. Elles sont nécessaires pour répondre à votre demande en ligne et sont destinées à l'Assurance Mutuelle des Motards. Vous disposez d'un droit d'accès, de rectification, d'opposition et d'effacement des données vous concernant. Ces droits peuvent être exercés en justifiant de votre identité auprès de Assurance Mutuelle des Motards, 270 impasse Adam Smith, CS10100, 34479 PEROLS cedex. Vous disposez du droit d'introduire une réclamation auprès de la CNIL. Si vous ne souhaitez pas faire l'objet de démarchage téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition sur le site www.bloctel.gouv.fr. Toutefois en tant que sociétaire, nous sommes susceptibles de vous adresser de tels appels.]]></text>
 			</staticText>
@@ -558,19 +557,19 @@
 					<reportElement x="0" y="0" width="179" height="76" uuid="71b31666-ac4c-41d5-baa0-cc5e2a0263a8"/>
 					<image>
 						<reportElement x="66" y="5" width="45" height="45" uuid="3fc9871a-45de-42b2-8df1-b7cf11ffd01c"/>
-						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-MULTI-CONTRAT.png"]]></imageExpression>
+						<imageExpression><![CDATA[$P{ResourcesPath}+"PICTO-MULTI-CONTRAT-2.png"]]></imageExpression>
 					</image>
 					<staticText>
 						<reportElement x="6" y="52" width="166" height="12" uuid="883165ce-7e75-4456-8b59-eb4694f04d07"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="true"/>
+							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="true"/>
 						</textElement>
 						<text><![CDATA[JUSQU'A 20% DE REDUCTION !]]></text>
 					</staticText>
 					<staticText>
 						<reportElement x="6" y="64" width="166" height="12" uuid="48a52203-1d2a-4d9b-afc1-16f22c73c416"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="false"/>
+							<font fontName="HelveticaNeue LT 47 LtCn" size="10" isBold="false"/>
 						</textElement>
 						<text><![CDATA[En assurant plusieurs véhicules]]></text>
 					</staticText>
@@ -584,14 +583,14 @@
 					<staticText>
 						<reportElement x="5" y="52" width="168" height="12" uuid="03390361-d092-4924-867e-821941a7992d"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="true"/>
+							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="true"/>
 						</textElement>
 						<text><![CDATA[BENEFICIEZ D'UNE REMISE !]]></text>
 					</staticText>
 					<staticText>
 						<reportElement x="5" y="64" width="168" height="12" uuid="f198e1a7-8c77-4492-a4c3-aa0c44c18829"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="false"/>
+							<font fontName="HelveticaNeue LT 47 LtCn" size="10" isBold="false"/>
 						</textElement>
 						<text><![CDATA[Avec la conduite exclusive]]></text>
 					</staticText>
@@ -605,14 +604,14 @@
 					<staticText>
 						<reportElement x="6" y="52" width="168" height="12" uuid="390a28e6-1727-4142-841d-cd99f86f4103"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="true"/>
+							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="true"/>
 						</textElement>
 						<text><![CDATA[PAYEZ MOINS CHER !]]></text>
 					</staticText>
 					<staticText>
 						<reportElement x="6" y="64" width="168" height="12" uuid="8cd28784-f3ab-4a8a-b193-22b9744ec936"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font size="8" isBold="false"/>
+							<font fontName="HelveticaNeue LT 47 LtCn" size="10" isBold="false"/>
 						</textElement>
 						<text><![CDATA[En réglant votre côtisation en 1 fois]]></text>
 					</staticText>
