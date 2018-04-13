@@ -148,7 +148,7 @@
 		<fieldDescription><![CDATA[version]]></fieldDescription>
 	</field>
 	<detail>
-		<band height="484">
+		<band height="460">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<textField>
 				<reportElement mode="Opaque" x="260" y="57" width="277" height="42" forecolor="#FFFFFF" backcolor="#A1C755" uuid="29336326-36f4-4d2b-b64e-3378e9831963"/>
@@ -423,7 +423,7 @@
 				<textFieldExpression><![CDATA[$F{nom}.toUpperCase()+" "+$F{prenom}.toUpperCase()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement positionType="Float" x="-1" y="428" width="537" height="52" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
+				<reportElement positionType="Float" x="-1" y="428" width="537" height="32" uuid="5e5b4d21-2a29-4df4-abb3-f4076204e006">
 					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.y" value="1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -433,7 +433,7 @@
 					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="HelveticaNeue LT 57 Cn" size="10"/>
+					<font fontName="HelveticaNeue LT 57 Cn" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA["En souscrivant un contrat d'assurance chez nous, vous devenez, sauf si vous ne l'êtes déjà, sociétaire de la Mutuelle des Motards. Vous devez, à  ce titre, vous acquitter, une seule et unique fois, d'un droit d'adhésion de "+$P{DroitAdhesion}+" € TTC (tarif en France métropolitaine).\nCe devis sur les prix et les garanties a été établi en fonction des informations que vous nous avez communiquées et ne constitue pas une proposition de tarif."]]></textFieldExpression>
 			</textField>
@@ -562,7 +562,7 @@
 					<staticText>
 						<reportElement x="6" y="52" width="166" height="12" uuid="883165ce-7e75-4456-8b59-eb4694f04d07"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="true"/>
+							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="false"/>
 						</textElement>
 						<text><![CDATA[JUSQU'A 20% DE REDUCTION !]]></text>
 					</staticText>
@@ -583,7 +583,7 @@
 					<staticText>
 						<reportElement x="5" y="52" width="168" height="12" uuid="03390361-d092-4924-867e-821941a7992d"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="true"/>
+							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="false"/>
 						</textElement>
 						<text><![CDATA[BENEFICIEZ D'UNE REMISE !]]></text>
 					</staticText>
@@ -604,7 +604,7 @@
 					<staticText>
 						<reportElement x="6" y="52" width="168" height="12" uuid="390a28e6-1727-4142-841d-cd99f86f4103"/>
 						<textElement textAlignment="Center" verticalAlignment="Middle">
-							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="true"/>
+							<font fontName="HelveticaNeue LT 77 BoldCn" size="10" isBold="false"/>
 						</textElement>
 						<text><![CDATA[PAYEZ MOINS CHER !]]></text>
 					</staticText>
